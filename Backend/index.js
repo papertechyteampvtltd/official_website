@@ -2,12 +2,14 @@
 import express from "express";
 import mongoose from "mongoose";
 import Product from "./module/product.js";
+import cors from "cors";
 
 const app = express();
 app.use(express.json());
 app.set("view engine", "ejs");
 app.set("views", "./views");
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 
 const mongo_url = "mongodb://127.0.0.1:27017/Papertechy";
@@ -27,7 +29,7 @@ main();
 
 // Root route
 app.get("/", (req, res) => {
-  res.send("hii there");
+  res.json({ message: "Hello !" });
 });
 
 
