@@ -1,0 +1,22 @@
+<!-- views\products\main.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products</title>
+</head>
+<body>
+    <h3>All Products</h3>
+    <a href="/products/new">
+        <button type="button">Create New Product</button>
+    </a>
+        <ul>
+            <% for (let product of Products) { %>
+                <li>
+                    <a href="/products/<%= product._id %>"><%= product.title %></a>
+                </li>
+            <% } %>
+        </ul>
+</body>
+</html>

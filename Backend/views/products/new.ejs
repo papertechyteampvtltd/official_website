@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Product</title>
+  </head>
+  <body>
+    <h1>Create a New Product</h1>
+    <form action="/products" method="POST">
+      <label for="name">Product Name:</label>
+      <input type="text" id="name" name="name" required />
+      <br />
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" required></textarea>
+      <br />
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" required />
+      <br />
+      <label for="product_image_array">Image URLs (comma separated):</label>
+      <input
+        type="text"
+        id="product_image_array"
+        name="product_image_array"
+      />
+      <br />
+      <label for="amazon_link">Amazon Link:</label>
+      <input type="url" id="amazon_link" name="amazon_link" required />
+      <button type="submit">Create Product</button>
+    </form>
+  </body>
+</html>
